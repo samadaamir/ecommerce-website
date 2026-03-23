@@ -14,23 +14,134 @@
 <body>
     <header>
         <div id="navbar">
-            <nav id="nav" class="flex">
-                <div id="logo">Elvora</div>
-                <ul>
-                    <li>Home</li>
-                    <li>Categories</li>
-                    <li>Cart <i class="fa-solid fa-cart-arrow-down"></i></li>
-
-                </ul>
-
+            <nav id="nav">
+                <div class="logo">Elvora</div>
+   <ul>
+    <li class="dropdown">
+        Categories <i class="fa-solid fa-caret-down"></i>
+        <ul class="dropdown-menu">
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Kids</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">Women</a></li>
+        </ul>
+    </li>
+    <li><i class="fa-regular fa-house"></i></li>
+    <li><i class="fa-solid fa-cart-arrow-down"></i></li>
+</ul>
             </nav>
         </div>
     </header>
     <section id="home">
         <div class="hero container">
-           
+            <div class="hero-content">
+                <h1>New Collection</h1>
+                <p>Discover the latest trends in fashion</p>
+                <button>Shop Now</button>
+            </div>
         </div>
     </section>
+    <section class="section">
+        <h2 class="heading">Categories</h2>
+        <div class="category-container container">
+            <div class="category">
+                <img src="images/mencategory.jpeg" alt="men">
+                <button>For Men</button>
+            </div>
+            <div class="category">
+                <img src="images/kidscategory.jpeg" alt="kids">
+                <button>For Kids</button>
+            </div>
+            <div class="category">
+                <img src="images/accessoriescategory.jpeg" alt="Accessories">
+                <button>Accessories</button>
+            </div>
+            <div class="category">
+                <img src="images/womencategory.jpeg" alt="women">
+                <button>For Women</button>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="sale" class="section">
+    <div class="sale-banner container">
+        <div class="sale-content">
+            <button>Shop Now</button>
+        </div>
+    </div>
+</section>
+
+<section id="products">
+    <div class="product-container container">
+        <!-- Example Product -->
+        <div class="product-card">
+            <img src="images/jacket.jpeg" alt="Product 1">
+            <div class="product-info">
+                <h3>Stylish Jacket</h3>
+                <p>Comfortable and trendy jacket for all seasons.</p>
+                <button>Shop Now</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="images/shoes.jpeg" alt="Product 2">
+            <div class="product-info">
+                <h3>Cool Sneakers</h3>
+                <p>High-quality sneakers for everyday wear.</p>
+                <button>Shop Now</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="images/shoes.jpeg" alt="Product 2">
+            <div class="product-info">
+                <h3>Cool Sneakers</h3>
+                <p>High-quality sneakers for everyday wear.</p>
+                <button>Shop Now</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="images/shoes.jpeg" alt="Product 2">
+            <div class="product-info">
+                <h3>Cool Sneakers</h3>
+                <p>High-quality sneakers for everyday wear.</p>
+                <button>Shop Now</button>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="images/shoes.jpeg" alt="Product 2">
+            <div class="product-info">
+                <h3>Cool Sneakers</h3>
+                <p>High-quality sneakers for everyday wear.</p>
+                <button>Shop Now</button>
+            </div>
+        </div>
+
+
+        <!-- Add more product cards similarly -->
+    </div>
+</section>
+<footer>
+    <div class="footer-container container">
+        <!-- Left side: Logo + Button -->
+        <div class="footer-left">
+            <h2 class="logo">Elvora</h2>
+            <button>View All Products</button>
+        </div>
+
+        <!-- Right side: Links -->
+        <div class="footer-links">
+            <a href="#">Men</a>
+            <a href="#">Kids</a>
+            <a href="#">Accessories</a>
+            <a href="#">Women</a>
+        </div>
+    </div>
+</footer>
+<script src="script.js"></script>
 </body>
 
 </html>
