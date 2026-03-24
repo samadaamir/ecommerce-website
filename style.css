@@ -89,6 +89,23 @@ nav ul li.dropdown i {
     font-size: 0.8rem;
 }
 
+#cart-container {
+    position: relative;
+    cursor: pointer;
+}
+
+#cart-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background: var(--secondary-clr);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 1px 3px;
+    border-radius: 50%;
+}
+
 /* Dropdown menu (hidden by default) */
 .dropdown-menu {
     display: none;

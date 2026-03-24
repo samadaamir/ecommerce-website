@@ -161,20 +161,23 @@ const products = [
   }
 
 ];
-
 const container = document.querySelector(".product-container");
 const nextBtn = document.getElementById("next");
 const prevBtn = document.getElementById("prev");
+const cartCount = document.querySelector("#cart-count");
 
-let startIndex = 0; // First product to show
-const visibleCount = 5; // Number of products to show at a time
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+cartCount.textContent = cart.length;
 
+let startIndex = 0;           // first product to show
+const visibleCount = 5;       // number of products to show at a time
+
+// function to render products slider
 function renderProductsSlider() {
   container.innerHTML = ""; // clear previous cards
 
-  // show only 4 products at a time
   for (let i = startIndex; i < startIndex + visibleCount; i++) {
-    if (i >= products.length) break; // prevent overflow
+    if (i >= products.length) break;
 
     const product = products[i];
 
@@ -194,7 +197,31 @@ function renderProductsSlider() {
     price.textContent = "Rs. " + product.price;
 
     const btn = document.createElement("button");
+    btn.classList.add("add-to-cart");
     btn.textContent = "Add to Cart";
+
+    // 🔹 Add click event for adding to cart
+    btn.addEventListener("click", () => {
+      // check if product already in cart
+      const exists = cart.some(item => item.id === product.id);
+      if (exists) {
+        alert(`${product.name} is already in the cart!`);
+        return;
+      }
+
+      const productData = {
+        id: product.id,
+        name: product.name,
+        price: product.price,
+        img: product.image
+      };
+
+      cart.push(productData);
+      localStorage.setItem("cart", JSON.stringify(cart));
+      cartCount.textContent = cart.length;
+
+      alert(`${product.name} added to cart!`);
+    });
 
     info.appendChild(name);
     info.appendChild(price);
@@ -207,7 +234,7 @@ function renderProductsSlider() {
   }
 }
 
-// Next button
+// next and previous buttons
 nextBtn.addEventListener("click", () => {
   if (startIndex + visibleCount < products.length) {
     startIndex++;
@@ -215,7 +242,6 @@ nextBtn.addEventListener("click", () => {
   }
 });
 
-// Prev button
 prevBtn.addEventListener("click", () => {
   if (startIndex > 0) {
     startIndex--;
@@ -223,5 +249,5 @@ prevBtn.addEventListener("click", () => {
   }
 });
 
-// Initial render
+// initial render
 renderProductsSlider();
