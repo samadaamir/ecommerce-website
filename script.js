@@ -167,7 +167,7 @@ const nextBtn = document.getElementById("next");
 const prevBtn = document.getElementById("prev");
 
 let startIndex = 0; // First product to show
-const visibleCount = 4; // Number of products to show at a time
+const visibleCount = 5; // Number of products to show at a time
 
 function renderProductsSlider() {
   container.innerHTML = ""; // clear previous cards

@@ -13,6 +13,8 @@ body {
     height: 100%;
     font-family: Poppins;
     background-color: var(--bg-clr);
+    overflow-x: hidden;  
+    scroll-behavior: smooth;
 
 }
 
@@ -333,16 +335,36 @@ nav ul li.dropdown i {
     color: white;
 }
 
-/* Product container grid */
+/* Product container aligned with container */
 .product-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    display: flex;               /* keep flex for horizontal slider */
     gap: 1.5rem;
-    margin-top: 2rem;
+    overflow-x: auto;            /* allow horizontal scroll */
+    scroll-behavior: smooth;
+    
+    width: 100%;                 /* take full width of parent */
+    max-width: 95%;              /* match .container width */
+    margin: 1.5rem auto 0 auto;  /* center horizontally, add top margin */
+    padding-right: 1.5rem;       /* space at right end */
+    box-sizing: border-box;      /* include padding in width */
+}
+
+/* Hide native scrollbar but keep scroll functional (optional) */
+.product-container::-webkit-scrollbar {
+    height: 8px;
+}
+.product-container::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.2);
+    border-radius: 4px;
+}
+.product-container::-webkit-scrollbar-track {
+    background: transparent;
 }
 
 /* Product card */
 .product-card {
+    min-width: 220px;        /* card width */
+    flex-shrink: 0;          /* prevent shrinking */
     position: relative;
     overflow: hidden;
     border-radius: 9px;
@@ -357,17 +379,11 @@ nav ul li.dropdown i {
     transition: transform 0.4s ease;
 }
 
-.product-card:hover {
-    border-radius: 40px;
-    transition: 0.4s ease;
-}
-
-/* Info overlay (hidden by default) */
+/* Info overlay */
 .product-info {
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.6);
-    /* dark overlay */
     color: white;
     opacity: 0;
     padding: 20px;
@@ -382,12 +398,10 @@ nav ul li.dropdown i {
 /* Hover effects */
 .product-card:hover img {
     transform: scale(1.1);
-    /* zoom in image */
 }
 
 .product-card:hover .product-info {
     opacity: 1;
-    /* show info */
 }
 
 /* Product info elements */
@@ -421,6 +435,7 @@ nav ul li.dropdown i {
 
 /* Footer styling */
 footer {
+    margin-top: 1.5rem;
     background-color: var(--secondary-clr);
     color: white;
     padding: 40px 0;
