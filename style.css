@@ -476,3 +476,25 @@ footer {
     color: #ccc;
     /* subtle hover effect */
 }
+.slider-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.slider-controls button {
+  padding: 10px 20px;
+  border: none;
+  background-color: var(--bg-clr);
+  color: black;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.slider-controls button:hover {
+  background-color: black;
+  color: white;
+}
