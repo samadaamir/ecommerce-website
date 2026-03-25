@@ -20,10 +20,11 @@
                     <li class="dropdown">
                         Categories <i class="fa-solid fa-caret-down"></i>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Men</a></li>
-                            <li><a href="#">Kids</a></li>
-                            <li><a href="#">Accessories</a></li>
-                            <li><a href="#">Women</a></li>
+                            <li><a href="#" data-category="all">All</a></li>
+                            <li><a href="#" data-category="men">Men</a></li>
+                            <li><a href="#" data-category="kids">Kids</a></li>
+                            <li><a href="#" data-category="accessories">Accessories</a></li>
+                            <li><a href="#" data-category="women">Women</a></li>
                         </ul>
                     </li>
                     <li><i class="fa-regular fa-house"></i></li>
@@ -49,32 +50,23 @@
         <div class="category-container container">
             <div class="category">
                 <img src="images/mencategory.jpeg" alt="men">
-                <button>For Men</button>
+                <button href="#" data-category="men">For Men</button>
             </div>
             <div class="category">
                 <img src="images/kidscategory.jpeg" alt="kids">
-                <button>For Kids</button>
+                <button href="#" data-category="kids">For Kids</button>
             </div>
             <div class="category">
                 <img src="images/accessoriescategory.jpeg" alt="Accessories">
-                <button>Accessories</button>
+                <button href="#" data-category="accessories">Accessories</button>
             </div>
             <div class="category">
                 <img src="images/womencategory.jpeg" alt="women">
-                <button>For Women</button>
+                <button href="#" data-category="women">For Women</button>
             </div>
         </div>
 
     </section>
-
-    <section id="sale" class="section">
-        <div class="sale-banner container">
-            <div class="sale-content">
-                <button>Shop Now</button>
-            </div>
-        </div>
-    </section>
-
     <section id="products">
         <div class="product-container container">
 
@@ -82,6 +74,13 @@
         <div class="slider-controls container">
             <button id="prev">⬅ Previous</button>
             <button id="next">Next ➡</button>
+        </div>
+    </section>
+    <section id="sale" class="section">
+        <div class="sale-banner container">
+            <div class="sale-content">
+                <button>Shop Now</button>
+            </div>
         </div>
     </section>
 
@@ -102,6 +101,16 @@
             </div>
         </div>
     </footer>
+    <div id="cart-sidebar">
+        <div class="cart-header">
+            <h2><i class="fa-solid fa-cart-arrow-down"></i></h2>
+            <span id="close-cart">✖</span>
+        </div>
+
+        <div id="cart-items"></div>
+
+        <h3 id="cart-total"></h3>
+    </div>
     <script src="script.js"></script>
 </body>
 
