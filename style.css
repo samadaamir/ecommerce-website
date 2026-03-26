@@ -13,7 +13,7 @@ body {
     height: 100%;
     font-family: Poppins;
     background-color: var(--bg-clr);
-    overflow-x: hidden;  
+    overflow-x: hidden;
     scroll-behavior: smooth;
 
 }
@@ -29,32 +29,38 @@ body {
 
 #navbar {
     width: 95%;
-    margin: 0.6rem auto; 
+    margin: 0.6rem auto;
     background-color: var(--main-clr);
     border-radius: 9px;
     /* remove top/bottom padding */
-    padding: 0 15px; 
+    padding: 0 15px;
 }
 
 #nav {
     display: flex;
-    align-items: center;      /* vertical centering */
+    align-items: center;
+    /* vertical centering */
     justify-content: space-between;
-    height: 60px;             /* set container height */
+    height: 60px;
+    /* set container height */
 }
+
 /* Navbar links */
 #nav ul {
     display: flex;
     gap: 1.5rem;
     margin: 0;
     padding: 0;
-    align-items: center;      /* center icons and dropdown */
+    align-items: center;
+    /* center icons and dropdown */
 }
 
 #nav ul li {
     display: flex;
-    align-items: center;      /* center icon and text */
-    position: relative;       /* for dropdown */
+    align-items: center;
+    /* center icon and text */
+    position: relative;
+    /* for dropdown */
 }
 
 .container {
@@ -67,13 +73,16 @@ body {
     padding-top: 1.4rem;
     padding-bottom: 1.4rem;
 }
+
 .logo {
     font-family: Pacifico;
     font-size: 1.5rem;
     font-weight: bolder;
-    line-height: 1;           /* remove extra spacing */
+    line-height: 1;
+    /* remove extra spacing */
     margin: 0;
 }
+
 nav ul li.dropdown {
     position: relative;
     padding: 10px 15px;
@@ -93,10 +102,12 @@ nav ul li.dropdown i {
     position: relative;
     cursor: pointer;
 }
+
 #cart-container a {
-  text-decoration: none;
-  color: inherit;
+    text-decoration: none;
+    color: inherit;
 }
+
 #cart-count {
     position: absolute;
     top: -8px;
@@ -108,60 +119,65 @@ nav ul li.dropdown i {
     padding: 1px 3px;
     border-radius: 50%;
 }
+
 /* Cart Sidebar */
 #cart-sidebar {
-  position: fixed;
-  top: 0;
-  right: -100%; /* hidden */
-  width: 320px;
-  height: 100vh;
-  background: var(--bg-clr);
-  box-shadow: -4px 0 10px rgba(0,0,0,0.2);
-  padding: 20px;
-  transition: 0.3s ease;
-  z-index: 999;
-  overflow-y: auto;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    /* hidden */
+    width: 320px;
+    height: 100vh;
+    background: var(--bg-clr);
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transition: 0.3s ease;
+    z-index: 999;
+    overflow-y: auto;
 }
 
 /* Active state */
 #cart-sidebar.active {
-  right: 0;
+    right: 0;
 }
 
 /* Header */
 .cart-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #close-cart {
-  cursor: pointer;
-  font-size: 1.5rem;
+    cursor: pointer;
+    font-size: 1.5rem;
 }
 
 /* Cart items */
 .cart-item {
-  margin-top: 15px;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 10px;
+    margin-top: 15px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
 }
 
 .cart-item img {
-  width: 80px;
-  height: 80px;
-  object-fit: cover;
-  border-radius: 4px;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
 }
 
 .cart-item button {
-  margin-top: 5px;
-  padding: 5px 10px;
-  border: none;
-  background: black;
-  color: white;
-  cursor: pointer;
+    font-family: Poppins;
+    margin-top: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    background: black;
+    color: white;
+    cursor: pointer;
 }
+
 /* Dropdown menu (hidden by default) */
 .dropdown-menu {
     display: none;
@@ -170,7 +186,7 @@ nav ul li.dropdown i {
     left: 0;
     background-color: var(--main-clr);
     border-radius: 9px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     min-width: 150px;
     overflow: hidden;
     z-index: 100;
@@ -191,7 +207,8 @@ nav ul li.dropdown i {
 }
 
 .dropdown-menu li a:hover {
-    background-color: #ECE9E2; /* subtle hover background */
+    background-color: #ECE9E2;
+    /* subtle hover background */
     color: black;
     border-radius: 5px;
 }
@@ -379,6 +396,7 @@ nav ul li.dropdown i {
     align-items: center;
     justify-content: center;
 }
+
 .sale-banner::after {
     content: "";
     position: absolute;
@@ -393,6 +411,7 @@ nav ul li.dropdown i {
 .sale-banner:has(button:hover)::after {
     opacity: 1;
 }
+
 .sale-content {
     position: absolute;
     bottom: 20px;
@@ -423,34 +442,36 @@ nav ul li.dropdown i {
 
 
 .product-container {
-    display: flex;             
+    display: flex;
     gap: 1.5rem;
-    overflow-x: auto;            
+    overflow-x: auto;
     scroll-behavior: smooth;
-    
-    width: 100%;                 
-    max-width: 95%;             
-    margin: 1.5rem auto 0 auto;  
-    padding-right: 1.5rem;       
-    box-sizing: border-box;      
+
+    width: 100%;
+    max-width: 95%;
+    margin: 1.5rem auto 0 auto;
+    padding-right: 1.5rem;
+    box-sizing: border-box;
 }
 
 
 .product-container::-webkit-scrollbar {
     height: 8px;
 }
+
 .product-container::-webkit-scrollbar-thumb {
-    background: rgba(0,0,0,0.2);
+    background: rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 }
+
 .product-container::-webkit-scrollbar-track {
     background: transparent;
 }
 
 
 .product-card {
-    min-width: 220px;        
-    flex-shrink: 0;          
+    min-width: 220px;
+    flex-shrink: 0;
     position: relative;
     overflow: hidden;
     border-radius: 9px;
@@ -577,25 +598,27 @@ footer {
     color: #ccc;
     /* subtle hover effect */
 }
+
 .slider-controls {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
 }
 
 .slider-controls button {
-  padding: 10px 20px;
-  border: none;
-  background-color: var(--bg-clr);
-  color: black;
-  font-weight: 600;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
+    font-family: Poppins;
+    padding: 10px 20px;
+    border: none;
+    background-color: var(--bg-clr);
+    color: black;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 .slider-controls button:hover {
-  background-color: black;
-  color: white;
+    background-color: black;
+    color: white;
 }

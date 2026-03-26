@@ -13,7 +13,7 @@ const products = [
     name: "Men Shoes",
     price: 2500,
     category: "men",
-    image: "https://www.pinterest.com/pin/14003448838084909/"
+    image: "https://images.unsplash.com/photo-1605733160314-4fc7dac4bb16?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fG1lbiUyMHNob2VzfGVufDB8fDB8fHww"
   },
 
   {
@@ -29,7 +29,7 @@ const products = [
     name: "Men Watch",
     price: 2000,
     category: "accessories",
-    image: "https://www.pinterest.com/pin/4602397475350998144/"
+    image: "https://images.unsplash.com/photo-1730628801130-61ca50004a48?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fG1lbiUyMHdhdGNofGVufDB8fDB8fHww"
   },
 
   {
@@ -37,7 +37,7 @@ const products = [
     name: "Women Dress",
     price: 3000,
     category: "women",
-    image: "https://www.pinterest.com/pin/3166662232865401/"
+    image: "https://i.pinimg.com/736x/99/c1/f4/99c1f4b53b184155d8ef2e603bff3d72.jpg"
   },
 
   {
@@ -45,7 +45,7 @@ const products = [
     name: "Women Handbag",
     price: 1800,
     category: "accessories",
-    image: "https://www.pinterest.com/pin/708683691408122098/"
+    image: "https://i.pinimg.com/736x/05/c2/d3/05c2d3aaec12bde214e87b2c9d7b0db1.jpg"
   },
 
   {
@@ -53,7 +53,7 @@ const products = [
     name: "Women Sandals",
     price: 1500,
     category: "women",
-    image: "https://www.pinterest.com/pin/4590575472459329664/"
+    image: "https://i.pinimg.com/1200x/0a/a0/ee/0aa0eefa00bc37012582ddf2d696a44d.jpg"
   },
 
   {
@@ -61,7 +61,7 @@ const products = [
     name: "Women Watch",
     price: 2200,
     category: "accessories",
-    image: "https://www.pinterest.com/pin/700661654574566766/"
+    image: "https://i.pinimg.com/736x/dc/67/27/dc67279e9ef133ff5112bef12671d83e.jpg"
   },
 
   {
@@ -69,7 +69,7 @@ const products = [
     name: "Kids Shirt",
     price: 800,
     category: "kids",
-    image: "https://www.pinterest.com/pin/1030761433453991555/"
+    image: "https://i.pinimg.com/1200x/40/2a/bf/402abf5af58bfeb7de4a20ed346c9071.jpg"
   },
 
   {
@@ -77,7 +77,7 @@ const products = [
     name: "Kids Shoes",
     price: 1200,
     category: "kids",
-    image: "https://www.pinterest.com/pin/1101411652637312775/"
+    image: "https://i.pinimg.com/1200x/d6/46/44/d64644f32dcb5fd29a538cd3fb5a3494.jpg"
   },
 
   {
@@ -85,7 +85,7 @@ const products = [
     name: "Kids Jacket",
     price: 2000,
     category: "kids",
-    image: "https://www.pinterest.com/pin/225109681367027739/"
+    image: "https://i.pinimg.com/1200x/c1/21/aa/c121aa9af1356e540b58e7397bb37487.jpg"
   },
 
   {
@@ -93,7 +93,7 @@ const products = [
     name: "Kids Glasses",
     price: 600,
     category: "kids",
-    image: "https://www.pinterest.com/pin/304133781100130562/"
+    image: "https://i.pinimg.com/1200x/68/0a/f5/680af5f92dcf0072049ee1cf86f5899d.jpg"
   },
 
   {
@@ -101,7 +101,7 @@ const products = [
     name: "Cap",
     price: 500,
     category: "accessories",
-    image: "https://www.pinterest.com/pin/114982596733893100/"
+    image: "https://i.pinimg.com/736x/44/4c/fe/444cfea4975acf62164ca519d62cee86.jpg"
   },
 
   {
@@ -109,7 +109,7 @@ const products = [
     name: "Sunglasses",
     price: 900,
     category: "accessories",
-    image: "https://www.pinterest.com/pin/53198839343045459/"
+    image: "https://i.pinimg.com/736x/8d/87/ea/8d87eae479b4ca9ea695718a65f8eec3.jpg"
   },
 
   {
@@ -117,7 +117,7 @@ const products = [
     name: "Backpack",
     price: 1600,
     category: "accessories",
-    image: "https://www.pinterest.com/pin/331718328824765680/"
+    image: "https://i.pinimg.com/1200x/9c/79/b6/9c79b6230cf24eabcaa57e7c47c19f46.jpg"
   },
 
   {
@@ -125,7 +125,7 @@ const products = [
     name: "Wallet",
     price: 700,
     category: "accessories",
-    image: "https://www.pinterest.com/pin/919297342748605593/"
+    image: "https://i.pinimg.com/1200x/89/0d/27/890d2745f2dd33febd789e11f8718d6c.jpg"
   },
 
   {
@@ -133,7 +133,7 @@ const products = [
     name: "Men Jeans",
     price: 2200,
     category: "men",
-    image: "https://www.pinterest.com/pin/369858188166551221/"
+    image: "https://i.pinimg.com/736x/5d/b7/fa/5db7fa3b674edfed9a64e0a2a3738d37.jpg"
   },
 
   {
@@ -141,7 +141,7 @@ const products = [
     name: "Women Top",
     price: 1400,
     category: "women",
-    image: "https://www.pinterest.com/pin/2603712282318326/"
+    image: "https://i.pinimg.com/736x/2f/a7/cc/2fa7cc6b395bfa236fd87015a5b6112b.jpg"
   },
 
   {
@@ -149,7 +149,7 @@ const products = [
     name: "Kids Shorts",
     price: 900,
     category: "kids",
-    image: "https://www.pinterest.com/pin/643451865552195229/"
+    image: "https://i.pinimg.com/1200x/87/30/bf/8730bf473b45bd44ed3afadb1e16b30a.jpg"
   },
 
   {
@@ -157,7 +157,7 @@ const products = [
     name: "Belt",
     price: 600,
     category: "accessories",
-    image: "https://www.pinterest.com/pin/883761126908965913/"
+    image: "https://i.pinimg.com/1200x/c9/3d/39/c93d39e5c3a470f8e226cd627b99f68c.jpg"
   }
 
 ];
