@@ -25,9 +25,8 @@ body {
 
 }
 
-/*  NAVBAR and HOME*/
-
 #navbar {
+    
     width: 95%;
     margin: 0.6rem auto;
     background-color: var(--main-clr);
@@ -181,6 +180,7 @@ nav ul li.dropdown i {
 /* Dropdown menu (hidden by default) */
 .dropdown-menu {
     display: none;
+    flex-direction: column;
     position: absolute;
     top: 100%;
     left: 0;
@@ -194,7 +194,7 @@ nav ul li.dropdown i {
 
 /* Dropdown menu items */
 .dropdown-menu li {
-    padding: 10px 15px;
+    padding: 5px 5px;
 }
 
 .dropdown-menu li a {
@@ -208,7 +208,6 @@ nav ul li.dropdown i {
 
 .dropdown-menu li a:hover {
     background-color: #ECE9E2;
-    /* subtle hover background */
     color: black;
     border-radius: 5px;
 }
@@ -621,4 +620,74 @@ footer {
 .slider-controls button:hover {
     background-color: black;
     color: white;
+}
+/* Checkout button */
+#checkout-btn {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 10px;
+  background: var(--secondary-clr);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-family: Poppins;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Checkout form container */
+#checkout-form {
+  margin-top: 1rem;
+  padding: 15px;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Heading */
+#checkout-form h3 {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+/* Inputs */
+#checkout-form input {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: Poppins;
+  outline: none;
+}
+
+/* Input focus */
+#checkout-form input:focus {
+  border-color: #000;
+}
+
+/* Place order button */
+#place-order {
+  margin-top: 10px;
+  padding: 10px;
+  background: var(--secondary-clr);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-family: Poppins;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Total */
+#cart-total {
+  margin-top: 10px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Hidden class */
+.hidden {
+  display: none;
 }

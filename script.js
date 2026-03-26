@@ -162,6 +162,7 @@ const products = [
 
 ];
 
+
 const cartIcon = document.getElementById("cart-container");
 const cartSidebar = document.getElementById("cart-sidebar");
 const closeCart = document.getElementById("close-cart");
@@ -234,10 +235,9 @@ categoryLinks.forEach(link => {
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 cartCount.textContent = cart.length;
 
-let startIndex = 0;           // first product to show
-const visibleCount = 5;       // number of products to show at a time
+let startIndex = 0;           
+const visibleCount = 5;       
 
-// function to render products slider
 function renderProductsSlider() {
   let filteredProducts;
   if (selectedCategory === "all") {
@@ -251,7 +251,7 @@ function renderProductsSlider() {
     startIndex = 0;
   }
 
-  container.innerHTML = ""; // clear previous cards
+  container.innerHTML = ""; 
 
   for (let i = startIndex; i < startIndex + visibleCount; i++) {
     if (i >= filteredProducts.length) break;
@@ -277,9 +277,7 @@ function renderProductsSlider() {
     btn.classList.add("add-to-cart");
     btn.textContent = "Add to Cart";
 
-    // 🔹 Add click event for adding to cart
     btn.addEventListener("click", () => {
-      // check if product already in cart
       const exists = cart.some(item => item.id === product.id);
       if (exists) {
         alert(`${product.name} is already in the cart!`);
@@ -311,7 +309,6 @@ function renderProductsSlider() {
   }
 }
 
-// next and previous buttons
 nextBtn.addEventListener("click", () => {
 
   let filteredProducts = selectedCategory === "all"
@@ -329,6 +326,15 @@ prevBtn.addEventListener("click", () => {
     renderProductsSlider();
   }
 });
+const checkoutBtn = document.getElementById("checkout-btn");
+const checkoutForm = document.getElementById("checkout-form");
 
-// initial render
+checkoutBtn.addEventListener("click", () => {
+  if (cart.length === 0) {
+    alert("Cart is empty!");
+    return;
+  }
+
+  checkoutForm.classList.remove("hidden");
+});
 renderProductsSlider();
