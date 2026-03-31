@@ -1,118 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>E-commerce website</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
+
+<title>Elvora</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header>
-        <div id="navbar">
-            <nav id="nav">
-                <div class="logo">Elvora</div>
-                <ul>
-                    <li class="dropdown">
-                        Categories <i class="fa-solid fa-caret-down"></i>
-                        <ul class="dropdown-menu">
-                            <li><a href="#" data-category="all">All</a></li>
-                            <li><a href="#" data-category="men">Men</a></li>
-                            <li><a href="#" data-category="kids">Kids</a></li>
-                            <li><a href="#" data-category="accessories">Accessories</a></li>
-                            <li><a href="#" data-category="women">Women</a></li>
-                        </ul>
-                    </li>
-                    <li><i class="fa-regular fa-house"></i></li>
-                    <li id="cart-container">
-                        <i class="fa-solid fa-cart-arrow-down"></i>
-                        <span id="cart-count">0</span>
-                    </li>
-                </ul>
-            </nav>
+
+<header>
+    <div id="navbar">
+        <nav id="nav">
+            <div class="logo">Elvora.</div>
+
+            <ul>
+                <li class="dropdown">
+                    Categories <i class="fa-solid fa-caret-down"></i>
+                    <ul class="dropdown-menu">
+                        <li><a href="#" data-category="all">All</a></li>
+                        <li><a href="#" data-category="men">Men</a></li>
+                        <li><a href="#" data-category="kids">Kids</a></li>
+                        <li><a href="#" data-category="accessories">Accessories</a></li>
+                        <li><a href="#" data-category="women">Women</a></li>
+                    </ul>
+                </li>
+
+                <li id="cart-container">
+                    <i class="fa-solid fa-cart-arrow-down"></i>
+                    <span id="cart-count">0</span>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- HERO -->
+<section id="home">
+    <div class="hero container">
+        <div class="hero-content">
+            <h1>New Collection</h1>
+            <p>Discover the latest trends in fashion</p>
+            <button onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">
+                Shop Now
+            </button>
         </div>
-    </header>
-    <section id="home">
-        <div class="hero container">
-            <div class="hero-content">
-                <h1>New Collection</h1>
-                <p>Discover the latest trends in fashion</p>
-                <button>Shop Now</button>
-            </div>
-        </div>
-    </section>
-    <section class="section">
-        <h2 class="heading">Categories</h2>
-        <div class="category-container container">
-            <div class="category">
-                <img src="images/mencategory.jpeg" alt="men">
-                <button href="#" data-category="men">For Men</button>
-            </div>
-            <div class="category">
-                <img src="images/kidscategory.jpeg" alt="kids">
-                <button href="#" data-category="kids">For Kids</button>
-            </div>
-            <div class="category">
-                <img src="images/accessoriescategory.jpeg" alt="Accessories">
-                <button href="#" data-category="accessories">Accessories</button>
-            </div>
-            <div class="category">
-                <img src="images/womencategory.jpeg" alt="women">
-                <button href="#" data-category="women">For Women</button>
-            </div>
+    </div>
+</section>
+
+<!-- CATEGORIES -->
+<section class="section">
+    <h2 class="heading">Categories</h2>
+
+    <div class="category-container container">
+        <div class="category">
+            <img src="images/mencategory.jpeg" alt="image">
+            <button data-category="men">For Men</button>
         </div>
 
-    </section>
-    <section id="products">
-        <div class="product-container container">
-
-        </div>
-        <div class="slider-controls container">
-            <button id="prev">⬅ Previous</button>
-            <button id="next">Next ➡</button>
-        </div>
-    </section>
-    <section id="sale" class="section">
-        <div class="sale-banner container">
-            <div class="sale-content">
-                <button>Shop Now</button>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="footer-container container">
-            <!-- Left side: Logo + Button -->
-            <div class="footer-left">
-                <h2 class="logo">Elvora</h2>
-                <button>View All Products</button>
-            </div>
-
-            <!-- Right side: Links -->
-            <div class="footer-links">
-                <a href="#">Men</a>
-                <a href="#">Kids</a>
-                <a href="#">Accessories</a>
-                <a href="#">Women</a>
-            </div>
-        </div>
-    </footer>
-    <div id="cart-sidebar">
-        <div class="cart-header">
-            <h2><i class="fa-solid fa-cart-arrow-down"></i></h2>
-            <span id="close-cart">✖</span>
+        <div class="category">
+            <img src="images/kidscategory.jpeg" alt="image">
+            <button data-category="kids">For Kids</button>
         </div>
 
-        <div id="cart-items"></div>
+        <div class="category">
+            <img src="images/accessoriescategory.jpeg" alt="image">
+            <button data-category="accessories">Accessories</button>
+        </div>
 
-        <h3 id="cart-total"></h3>
-           <button id="checkout-btn">Checkout</button>
+        <div class="category">
+            <img src="images/womencategory.jpeg" alt="image">
+            <button data-category="women">For Women</button>
+        </div>
+    </div>
+</section>
 
-    <!-- Checkout Form -->
+<!-- PRODUCTS -->
+<section id="products">
+    <div class="product-container container"></div>
+
+    <div class="slider-controls container">
+        <button id="prev">⬅ Previous</button>
+        <button id="next">Next ➡</button>
+    </div>
+</section>
+
+<!-- SALE -->
+<section id="sale" class="section">
+    <div class="sale-banner container">
+        <div class="sale-content">
+            <button id="sale-btn">Shop Now</button>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-container container">
+        <h2 class="logo">Elvora.</h2>
+        <button onclick="document.getElementById('products').scrollIntoView({behavior:'smooth'})">
+            View All Products
+        </button>
+    </div>
+
+    <p class="copyright">© 2026 Elvora. | All rights reserved.</p>
+</footer>
+
+<!-- CART -->
+<div id="cart-sidebar">
+    <div class="cart-header">
+        <h2><i class="fa-solid fa-cart-arrow-down"></i></h2>
+        <span id="close-cart">✖</span>
+    </div>
+
+    <div id="cart-items"></div>
+    <h3 id="cart-total"></h3>
+
+    <button id="checkout-btn">Checkout</button>
+
     <div id="checkout-form" class="hidden">
         <h3>Checkout</h3>
 
@@ -124,8 +133,7 @@
         <button id="place-order">Place Order</button>
     </div>
 </div>
-    </div>
-    <script src="script.js"></script>
-</body>
 
+<script src="script.js"></script>
+</body>
 </html>
