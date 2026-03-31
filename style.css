@@ -741,3 +741,165 @@ button:hover {
     background: black;
     color: white;
 }
+
+/* =========================
+📱 MOBILE (max-width: 768px)
+========================= */
+
+@media (max-width: 768px) {
+
+/* ===== NAVBAR ===== */
+#nav {
+    flex-direction: row;
+    height: auto;
+    padding: 10px 0;
+}
+
+#nav ul {
+    gap: 1rem;
+}
+
+.logo {
+    font-size: 1.2rem;
+}
+
+/* ===== HERO ===== */
+.hero {
+    height: 70vh;
+    padding: 20px;
+}
+
+.hero-content {
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+}
+
+.hero-content button {
+    padding: 10px 15px;
+}
+
+/* ===== CATEGORY ===== */
+.category-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+
+.category:nth-child(1),
+.category:nth-child(2),
+.category:nth-child(3),
+.category:nth-child(4) {
+    grid-column: auto;
+    grid-row: auto;
+}
+
+.category {
+    height: 200px;
+}
+
+/* ===== SALE BANNER ===== */
+.sale-banner {
+    height: 35vh;
+}
+
+.sale-content {
+    bottom: 10px;
+    left: 10px;
+    font-size: 0.9rem;
+}
+
+/* ===== PRODUCTS ===== */
+.product-container {
+    gap: 1rem;
+    padding-right: 1rem;
+}
+
+.product-card {
+    min-width: 180px;
+}
+
+.product-card img {
+    height: 240px;
+}
+
+/* ===== FOOTER ===== */
+.footer-container {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+}
+
+.footer-left button {
+    width: 100%;
+}
+
+/* ===== CART ===== */
+#cart-sidebar {
+    width: 100%;
+}
+
+/* ===== CHECKOUT ===== */
+#checkout-form {
+    padding: 10px;
+}
+
+}
+
+/* =========================
+📱 TABLET (769px - 1024px)
+========================= */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+/* ===== NAVBAR ===== */
+#nav ul {
+    gap: 1.2rem;
+}
+
+/* ===== HERO ===== */
+.hero {
+    height: 75vh;
+}
+
+.hero-content {
+    font-size: 1rem;
+}
+
+/* ===== CATEGORY ===== */
+.category-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+}
+
+.category:nth-child(1),
+.category:nth-child(4) {
+    grid-row: auto;
+}
+
+/* ===== SALE ===== */
+.sale-banner {
+    height: 40vh;
+}
+
+/* ===== PRODUCTS ===== */
+.product-card {
+    min-width: 200px;
+}
+
+.product-card img {
+    height: 260px;
+}
+
+/* ===== FOOTER ===== */
+.footer-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* ===== CART ===== */
+#cart-sidebar {
+    width: 350px;
+}
+
+
+}
